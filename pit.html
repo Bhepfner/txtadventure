@@ -1,0 +1,57 @@
+<html>
+<head>
+  <link rel="stylesheet" href="css.css">
+<title>the pit</title>
+<script>
+//
+function estart(){
+var x = window.localStorage.getItem('username');
+ var theclass =window.localStorage.getItem('class');
+ var test = "";
+ if(theclass==1234){
+     test= "the healer";
+     document.getElementById('result1').innerHTML=""
+ }
+ if (theclass==12345){
+   test= "the archer"
+ }
+ if (theclass==27356)
+{
+   test="the mage"
+}
+ if (theclass==12346)
+ {
+   test="the warrior"
+ }
+ var answer=x+" "+test;
+document.getElementById("result").innerHTML = answer;
+}
+function ARGH()
+{
+var y=document.getElementById('thetext').value;
+
+if(y==1 && theclass=27356){
+window.location.href="thefight.html"
+}
+
+if(y==1){}
+window.location.href="fight.html"
+}
+else{
+  alert(){
+    "why"
+  }
+  window.location.href="index.html"
+}
+}
+</script>
+</head>
+<body onload="estart()">
+  <h5 id=result></h5>
+  <hr>
+  <p>You run and come across a pit that you cannot cross, and the monster is still coming, what do you do</p>
+  <p>1 to fight 2 to run into the pit<p>
+  <input type="text" id=thetext>
+  <input type="button" onclick="ARGH()">
+</body>
+</html>

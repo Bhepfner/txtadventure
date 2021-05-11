@@ -1,0 +1,136 @@
+ <html>
+<head>
+  <title>False beginnings?</title>
+  <link rel="stylesheet" href="css.css">
+<script>
+// still not true
+function Themage(){
+  document.getElementById('mageexplorept3')
+  if (xv=1) {
+window.location.href="fight.html";
+} if (xv=2) {
+   window.location.href="pit.html";
+  }
+}
+function Thehealer(){
+  document.getElementById('healerexplorept3')
+  if (xv=1) {
+window.location.href="fight.html";
+  } else {
+   window.location.href="pit.html";
+  }
+}
+function Thewarrior(){
+  document.getElementById('warriorexplorept3')
+  if (xv=1) {
+window.location.href="fight.html";
+  } else {
+   window.location.href="pit.html";
+  }
+}
+function Thearcher(){
+  document.getElementById('archerexplorept3')
+  if (xv=1) {
+window.location.href="fight.html";
+  } else {
+   window.location.href="pit.html";
+  }
+}
+function pathchooser() {
+  var theclass=window.localStorage.getItem('class');
+  var something=document.getElementById('chooseyourpath').value;
+  var something=parseInt(something);
+  if(something==2){
+    alert("you go back to sleep and never wake up");
+    window.location.href="index.html";
+  }
+  if(something==1  && theclass==27356 ){
+document.getElementById("mageexplore").style.visibility="visible";
+document.getElementById("mageexplorept2").innerHTML="You come upon a staff, and some other mage things, and you also see a monster in the distance.";
+document.getElementById("mageexplorept3").style.visibility="visible";
+alert("1 to fight anything else to run")
+  }
+  if(something==1  && theclass==1234){
+document.getElementById("healerexplore").style.visibility="visible";
+document.getElementById("healerexplorept2").innerHTML="You come upon a potion, and some other healer things, and you also see a monster in the distance.";
+document.getElementById("healerexplorept3").style.visibility="visible";
+alert("1 to fight anything else to run")
+
+  }
+  if(something==1  && theclass==12346){
+document.getElementById("warriorexplore").style.visibility="visible";
+document.getElementById("warriorexplorept2").innerHTML = "You come upon a sword, and some other warrior things, and you also see a monster in the distance.";
+document.getElementById("warriorexplorept3").style.visibility="visible";
+alert("1 to fight anything else to run")
+
+  }
+  if(something==1  && theclass==12345){
+document.getElementById("archerexplore").style.visibility="visible";
+document.getElementById("archerexplorept2").innerHTML="You come upon a bow, and some other archer things, and you also see a monster in the distance.";
+document.getElementById("archerexplorept3").style.visibility="visible";
+alert("1 to fight anything else to run")
+
+  }
+}
+function estart(){
+  document.getElementById("mageexplore").style.visibility="hidden";
+//  document.getElementById("mageexplorept2").style.visibility="hidden";
+  document.getElementById("mageexplorept3").style.visibility="hidden";
+  document.getElementById("healerexplore").style.visibility="hidden";
+  //document.getElementById("healerexplorept2").style.visibility="hidden";
+  document.getElementById("healerexplorept3").style.visibility="hidden";
+  document.getElementById("warriorexplore").style.visibility="hidden";
+//  document.getElementById("warriorexplorept2").style.visibility="hidden";
+  document.getElementById("warriorexplorept3").style.visibility="hidden";
+  document.getElementById("archerexplore").style.visibility="hidden";
+  //document.getElementById("archerexplorept2").style.visibility="hidden";
+  document.getElementById("archerexplorept3").style.visibility="hidden";
+
+var x = window.localStorage.getItem('username');
+ var theclass =window.localStorage.getItem('class');
+ var test = "";
+ if(theclass==1234){
+     test= "the healer";
+ }
+ if (theclass==12345){
+   test= "the archer"
+ }
+ if (theclass==27356)
+{
+   test="the mage"
+}
+ if (theclass==12346)
+ {
+   test="the warrior"
+ }
+ var answer=x+" "+test;
+document.getElementById("result").innerHTML = answer;
+}
+</script>
+</head>
+<body onload="estart()">
+<h5 id=result></h5>
+<hr>
+<h1>You Awake in a Mystical world</h1>
+<h2>What do you do?</h2>
+<p> type 1 if you want to explore, if you want to go back to sleep type 2</p>
+<br>
+<input type="text" value="type what you want to do" id=chooseyourpath>
+<input type="button" value="Choose your path" onclick="pathchooser()">
+<br>
+<br>
+<br>
+<img src='staff.jpg' width='45%' height='45%' onclick="Themage()" id=mageexplore>
+<p id=mageexplorept2></p>
+<input type="text" value="click the image after your answer is typed" id=mageexplorept3>
+<img src='sword.jpg' width='45%' height='45%' onclick="Thewarrior()" id=warriorexplore>
+<p id="warriorexplorept2"></p>
+<input type="text" value="click the image after your answ er is typed" id=warriorexplorept3>
+<img src='bow.jpg' width='45%' height='45%' onclick="Thearcher()" id=archerexplore>
+<p id=archerexplorept2></p>
+<input type="text" value="click the i mage after your answer is typed"  id=archerexplorept3>
+<img src='potion.jpg' width='45%' height='45%' onclick="Thehealer()" id=healerexplore>
+<p id=healerexplorept2></p>
+<input type="text" value="click the image after your answer is typed" id=healerexplorept3>
+</body>
+</html>

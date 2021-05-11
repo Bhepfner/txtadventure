@@ -1,0 +1,95 @@
+<html>
+<head>
+    <link rel="stylesheet" href="css.css">
+<title> the fight </title>
+<script>
+  var dmgcount="";
+  var monsterhp=50;
+  var monsterdmg=10;
+  var damage = 0;
+  var armor =0;
+  var health = 0;
+  var name = "";
+  var hpcount="";
+function fight()
+{
+  name = window.localStorage.getItem('username');
+  damage=window.localStorage.getItem('dmg');
+  armor = window.localStorage.getItem('arm');
+  health=window.localStorage.getItem('hp');
+
+  if (damage==10){
+  while (health>  0 && monsterhp>0){
+      hpcount=hpcount+hp+"<br>";
+      health=health-10/armor;
+      monsterhp=monsterhp-10;
+      dmgcount=dmgcount+monsterhp + "<br>";
+  }}
+
+  if (damage-=25){
+  while (health>0 && monsterhp>0){
+    hpcount=hpcount+health+"<br>";
+    health=health-10/armor;
+    monsterhp=monsterhp-25;
+    dmgcount=dmgcount+monsterhp + "<br>";
+  }}
+
+  if (damage==60){
+  while (health>0 && monsterhp>0){
+     hp=hp-10/armor;
+    hpcount=hpcount+hp+"<br>";
+    monsterhp=monsterhp-60;
+    dmgcount=dmgcount+monsterhp + "<br>";
+  }}
+
+  if (damage==35){
+  while (health>0 && monsterhp>0){
+      hpcount=hpcount+hp+"<br>";
+    health=health-10/armor
+    monsterhp=monsterhp-35;
+    dmgcount=dmgcount+monsterhp + "<br>";
+  }}
+  var x = window.localStorage.getItem('username');
+   var theclass =window.localStorage.getItem('class');
+   var test = "";
+   if(theclass==1234){
+       test= "the healer";
+   }
+   if (theclass==12345){
+     test= "the archer"
+   }
+   if (theclass==27356)
+  {
+     test="the mage"
+  }
+   if (theclass==12346)
+   {
+     test="the warrior"
+   }
+   var answer=x+" "+test;
+  document.getElementById("result").innerHTML = answer;
+
+
+          document.getElementById('dmgresult').innerHTML=dmgcount;
+          document.getElementById('hpresult').innerHTML=hpcount;
+}
+</script>
+</head>
+<body onload="fight()">
+    <h5 id=result></h5>
+  <hr>
+  <h1>The Battle</h1>
+<table>
+  <tr>
+    <td>Damage ---></td>
+    <td id=dmgresult></td>
+    <td id=hpresult></td>
+  </tr>
+  <hr>
+  <br>
+  <a href="canyon.html"><p>go to a canyon</p></a>
+  <br>
+  <a href="elsewhere.html"><p>go elsewhere<p/></a>
+</table>
+</body>
+</html>

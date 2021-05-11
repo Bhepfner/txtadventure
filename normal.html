@@ -1,0 +1,103 @@
+<html>
+<head>
+  <link rel="stylesheet" href="css.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <title>class choser</title>
+  <style>
+
+  </style>
+  <script>
+  function name()
+  {
+    var x = window.localStorage.getItem('userName');
+       document.getElementById("namespot").innerHTML = y;
+   var post="welcome";
+   var y= post+x;
+   document.getElementById("namespot").innerHTML=post;
+  }
+    function Mage()
+    {
+      var theclass=27356;
+      var Magehp=85;
+      var Magedmg=60;
+      var Magearm=20;
+      var Magespd=10;
+      var Mageheal=40;
+  window.localStorage.setItem('hp',Magehp);
+  window.localStorage.setItem('dmg',Magedmg);
+  window.localStorage.setItem('arm',Magearm);
+  window.localStorage.setItem('spd',Magespd);
+  window.localStorage.setItem('heal',Mageheal);
+    window.localStorage.setItem('class',theclass);
+    window.location.href="Truebeginnings.html";
+    }
+    function Warrior()
+    {
+      var theclass=12346;
+      var Warriorhp=100
+      var Warriordmg=25
+      var Warriorarm=50
+      var Warriorspd=20
+      var Warriorheal=30
+      window.localStorage.setItem('hp',Warriorhp);
+      window.localStorage.setItem('dmg',Warriordmg);
+      window.localStorage.setItem('arm',Warriorarm);
+      window.localStorage.setItem('spd',Warriorspd);
+      window.localStorage.setItem('heal',Warriorheal);
+      window.localStorage.setItem('class',theclass);
+      window.location.href="Truebeginnings.html";
+    }
+    function Archer()
+    {
+      var theclass=12345;
+      var Archerhp=50;
+      var Archerdmg=35;
+      var Archerarm=35;
+      var Archerspd=75;
+      var Archerheal=30;
+      window.localStorage.setItem('hp',Archerhp);
+      window.localStorage.setItem('dmg',Archerdmg);
+      window.localStorage.setItem('arm',Archerarm);
+      window.localStorage.setItem('spd',Archerspd);
+      window.localStorage.setItem('heal',Archerheal);
+      window.localStorage.setItem('class',theclass);
+      window.location.href="Truebeginnings.html";
+    }
+
+    function Healer(){
+      var theclass=1234;
+      var Healerhp=120;
+      var Healerdmg=10;
+      var Healerarm=15;
+      var Healerspd=20;
+      var Healerheal=60;
+    window.localStorage.setItem('hp',Healerhp);
+    window.localStorage.setItem('dmg',Healerdmg);
+    window.localStorage.setItem('arm',Healerarm);
+    window.localStorage.setItem('spd',Healerspd);
+    window.localStorage.setItem('heal',Healerheal);
+    window.localStorage.setItem('class',theclass);
+    window.location.href="Truebeginnings.html";
+    }
+  </script>
+</head>
+<body onload="name()">
+<h1 id="namespot"></h1>
+<h2>Choose Your Class</h2>
+<table>
+  <tr>
+  <td><input type= "button" value="Mage" onclick="Mage()"></td>
+  <td><input type= "button" value="Warrior" onclick="Warrior()"></td>
+  <td><input type= "button" value="Archer" onclick="Archer()"></td>
+  <td><input type= "button" value="Healer" onclick="Healer()"></td>
+ </tr>
+  <tr>
+    <td><p> Mage Stats= <br> 85 Base hp <br> 60 base damage <br> 20 base armor <br> 10 base mobility <br> 40 base healing</p></td>
+    <td><p>Warrior stats= <br> 100 Base hp <br> 25 base damage <br> 50 base armor <br> 20 base mobility <br> 30 base healing</p></td>
+    <td><p>Archer stats= <br> 50 Base hp <br> 35 Base damage <br> 35 base armor <br> 75 base mobility <br> 30 base healing</p></td>
+    <td><p>Healer stats= <br> 120 Base hp <br> 10 Base damage <br> 15 base armor <br> 20 base mobility <br> 60 base healing</p></td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,13 @@
+
+body{
+   background-image: repeating-radial-gradient(farthest-side at 30% 25%,grey,teal 20%, aqua 30%);
+  text-align: center;
+}
+
+td{
+  font-family: 'Press Start 2P', cursive; 15px;
+  text-align: center;
+}
+p{
+  font-size: 23px
+}

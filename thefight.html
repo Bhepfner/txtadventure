@@ -1,0 +1,50 @@
+<html>
+<head>
+  <link rel="stylesheet" href="css.css">
+  <script>
+  var dmgcount="";
+  var monsterhp=1000;
+  var monsterdmg=20;
+  var damage = 60;
+  var armor =20;
+  var health =85;
+  var name = "";
+  var hpcount="";
+function pleasework()
+  var x = window.localStorage.getItem('username');
+   var theclass =window.localStorage.getItem('class');
+   var test = "";
+   if(theclass==1234){
+       test= "the healer";
+   }
+   if (theclass==12345){
+     test= "the archer"
+   }
+   if (theclass==27356)
+  {
+     test="the mage"
+  }
+   if (theclass==12346)
+   {
+     test="the warrior"
+   }
+   var answer=x+" "+test;
+  document.getElementById("result").innerHTML = answer;
+  while (health>0 && monsterhp>0){
+     hp=hp-10/armor;
+    hpcount=hpcount+hp+"<br>";
+    monsterhp=monsterhp-60;
+    dmgcount=dmgcount+monsterhp + "<br>";
+}
+          document.getElementById('dmgresult').innerHTML=dmgcount;
+          document.getElementById('hpresult').innerHTML=hpcount;
+}
+</script>
+</head>
+<body onload=pleasework()>
+<h1>The final boss</h1>
+<p id=dmgresult></p>
+<p id=hpresult</p>
+<a href="betterend.html"><p>click here></a>
+</body>
+</html>
